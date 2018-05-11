@@ -213,7 +213,7 @@ describe('PATCH /todos/:id', () => {
                 completed: false,
                 text
             })
-            .expect(404)
+            .expect(200)
             .expect((res) => {
                 expect(res.body.todo.text).toBe(text);
                 expect(res.body.todo.completed).toBe(false);
